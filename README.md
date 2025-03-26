@@ -3,10 +3,7 @@
 ---
 Currently, we provide deep learning modeling code and preprocessed datasets.
 
-## instruction
-这是一个 WiFi-Text CLIP 模型，旨在对齐 WiFi 信号中的 **BVP（Body-coordinate Velocity Profile）** 数据
-与文本描述，以实现 **zero-shot 学习**。该模型利用 **CNN+RNN+Transformer 结构作为 WiFi 数据编码器**，
-并采用 **BERT 作为文本编码器**，从而在 WiFi 传感数据与自然语言之间建立高效的跨模态表示映射。  
+## instruction 
 
 This is a **WiFi-Text CLIP model** designed to align **BVP (Body-coordinate Velocity Profile)** data in WiFi signals
 with text descriptions to enable **zero-shot learning**. The model utilizes the **CNN+RNN+Transformer structure as the WiFi data encoder** and
