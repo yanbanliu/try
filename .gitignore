@@ -172,3 +172,17 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+
+#Data数据库
+Data/
+
+#中间版本文件
+temp*.py
+*.pth
+clip_1-6.py
+forPlot.py
+load_data.py
+main.py
+my_try.py
+wifi_encoder.py
+clip_numberTest.py
