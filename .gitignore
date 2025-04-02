@@ -179,6 +179,7 @@ Data/
 #中间版本文件
 temp*.py
 *.pth
+clip.py
 clip_1-6.py
 forPlot.py
 load_data.py
