@@ -34,9 +34,9 @@ The BVP data for the corresponding gesture exists in the Data folder, please dow
 
 ## Pre-training with data
 
-### To use the current dataset with the training model, run
+### To use the current dataset with the training model , run
 
-> python clip.py
+> python src/WiFi-ZeroShot.py
 
 
 
