@@ -174,7 +174,6 @@ cython_debug/
 .pypirc
 
 #Data数据库
-Data/
 
 #中间版本文件
 temp*.py
