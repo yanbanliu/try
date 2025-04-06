@@ -333,6 +333,8 @@ def test(clip_model, dataloader, device, class_names, tokenizer):
 
     print(f"Test Accuracy: {accuracy:.4f}")
     print("Classification Report:\n", class_report)
+    print("conf_matrix:\n" , conf_matrix)
+
 
     # 绘制混淆矩阵
     plt.figure(figsize=(8, 6))
