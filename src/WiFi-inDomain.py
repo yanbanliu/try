@@ -1,13 +1,10 @@
 import os
 import scipy.io as scio
 import numpy as np
-from sklearn.metrics import confusion_matrix
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import torch.optim as optim
-from sympy import false
-from torch.utils.data import DataLoader, TensorDataset
+from torch.utils.data import DataLoader
 from sklearn.model_selection import train_test_split
 from transformers import BertModel
 from transformers import BertTokenizer
@@ -15,9 +12,9 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.metrics import confusion_matrix, accuracy_score, classification_report
 from torch.utils.data import Dataset
-from gesture_mapping import gesture_descriptions
-from gesture_mapping import number_to_gesture20181109
-from load_data import load_data
+from lib.gesture_mapping import gesture_descriptions
+from lib.gesture_mapping import number_to_gesture20181109
+
 
 # 数据加载与预处理
 def normalize_data(data_1):
