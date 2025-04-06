@@ -478,7 +478,9 @@ device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 # 设定是否使用已有模型
 use_pretrained_model = False  # True 代表加载已有模型，False 代表训练新模型
 # 加载 WiFi 数据
-data_dir = 'D:/Codefield_python/CLIP_WIFI/Data/gesture1_6'  # 数据存储的目录。
+# 获取当前文件（WiFi-crossLocation.py）所在目录的父目录
+project_root = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+data_dir = os.path.join(project_root, "Data", "gesture1_6")  # 数据存储的目录。
 ALL_MOTION = [1, 2, 3, 4, 5, 6]  # 所有动作的类别列表。
 fraction_for_test = 0.1  # 测试集所占比例。
 num_classes = len(ALL_MOTION)  # 假设有6个类别
