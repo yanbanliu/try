@@ -187,3 +187,5 @@ main.py
 my_try.py
 wifi_encoder.py
 clip_numberTest.py
+
+bert_base_uncased/
