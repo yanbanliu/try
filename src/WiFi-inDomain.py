@@ -217,7 +217,9 @@ class CNN_RNN_Transformer_Encoder(nn.Module):
 class TextEncoder(nn.Module):
     def __init__(self, feature_dim=512):
         super(TextEncoder, self).__init__()
-        self.bert = BertModel.from_pretrained("D:/Anaconda3/envs/clip_wifi/bert_base_uncased")
+
+        bert_path = os.path.join(project_root, "bert_base_uncased")
+        self.bert = BertModel.from_pretrained(bert_path)
 
         for param in self.bert.parameters():
             param.requires_grad = False
@@ -497,7 +499,9 @@ train_data, test_data, train_labels, test_labels = load_data(data_dir, ALL_MOTIO
 print("data finish")
 
 # 设定 tokenizer
-tokenizer = BertTokenizer.from_pretrained("D:/Anaconda3/envs/clip_wifi/bert_base_uncased")
+bert_path = os.path.join(project_root, "bert_base_uncased")
+#tokenizer = BertTokenizer.from_pretrained("D:/Anaconda3/envs/clip_wifi/bert_base_uncased")
+tokenizer = BertTokenizer.from_pretrained(bert_path)
 print("tokenizer finish")
 
 # 创建 Dataset 和 DataLoader
