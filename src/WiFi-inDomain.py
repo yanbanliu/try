@@ -41,6 +41,8 @@ def load_data(path_to_data, motion_sel, fraction_for_test):
     #train_data, train_labels = [], []
     #test_data, test_labels = [], []
     for data_root, data_dirs, data_files in os.walk(path_to_data):
+        if "Room1" or "Room2" in data_root:
+            continue
         for data_file_name in data_files:
             file_path = os.path.join(data_root, data_file_name)
             try:
