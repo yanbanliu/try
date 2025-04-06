@@ -372,7 +372,7 @@ print("data finish")
 # 设定 tokenizer
 bert_path = os.path.join(project_root, "bert_base_uncased")
 #tokenizer = BertTokenizer.from_pretrained("D:/Anaconda3/envs/clip_wifi/bert_base_uncased")
-tokenizer = BertTokenizer.from_pretrained("bert_path")
+tokenizer = BertTokenizer.from_pretrained(bert_path)
 print("tokenizer finish")
 
 # 创建 Dataset 和 DataLoader
