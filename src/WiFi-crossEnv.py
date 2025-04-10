@@ -43,7 +43,7 @@ def load_data(path_to_data, motion_sel, test_orientation = 1):
             file_path = os.path.join(data_root, data_file_name)
             try:
                 data_1 = scio.loadmat(file_path)['velocity_spectrum_ro']
-                label_1 = os.path.basename(data_root)  # 父文件夹名称
+                label_1 = int(os.path.basename(data_root))  # 父文件夹名称
                 torso_location = int(data_file_name.split('-')[2])  # 解析 torso location
                 face_orientation = int(data_file_name.split('-')[3])  # 解析 face_orientation
                 repetition_number = int(data_file_name.split('-')[4]) # 解析 repetition_number
