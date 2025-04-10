@@ -174,7 +174,6 @@ cython_debug/
 .pypirc
 
 #Data数据库
-Data/
 
 #中间版本文件
 temp*.py
@@ -190,3 +189,20 @@ clip_numberTest.py
 
 bert_base_uncased/
 /move.py
+/all_data/
+/Data/20181118-VS/
+/Data/20181117-VS/
+/all_data/
+/Data/20181109-VS/
+/Data/20181112-VS/
+/Data/20181115-VS/
+/Data/20181121-VS/
+/Data/20181127-VS/
+/Data/20181128-VS/
+/Data/20181130-VS/
+/Data/20181204-VS/
+/Data/20181205-VS/
+/Data/20181208-VS/
+/Data/20181209-VS/
+/Data/20181211-VS/
+/Data/gesture1_10/
