@@ -47,7 +47,7 @@ def load_data(path_to_data, motion_sel, fraction_for_test):
             file_path = os.path.join(data_root, data_file_name)
             try:
                 data_1 = scio.loadmat(file_path)['velocity_spectrum_ro']
-                label_1 = int(data_file_name.split('-')[1])
+                label_1 = os.path.basename(data_root)  # 父文件夹名称
                 if label_1 not in motion_sel:
                     continue
                 data_normed_1 = normalize_data(data_1)
