@@ -53,7 +53,7 @@ def load_data(path_to_data, motion_sel, fraction_for_test):
                 data_normed_1 = normalize_data(data_1)
                 if T_MAX < np.array(data_1).shape[2]:
                     T_MAX = np.array(data_1).shape[2]
-                data.append(data_normed_1)
+                data.append(data_normed_1.tolist())
                 label.append(label_1)
             except Exception:
                 continue
