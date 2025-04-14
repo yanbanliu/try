@@ -41,7 +41,7 @@ def load_data(path_to_data, motion_sel, fraction_for_test):
     #train_data, train_labels = [], []
     #test_data, test_labels = [], []
     for data_root, data_dirs, data_files in os.walk(path_to_data):
-        if "Room1" in data_root or "Room2" in data_root:
+        if "Room1" in data_root or "Room2" in data_root or "Room3" in data_root:
             continue
         for data_file_name in data_files:
             file_path = os.path.join(data_root, data_file_name)
@@ -53,10 +53,12 @@ def load_data(path_to_data, motion_sel, fraction_for_test):
                 data_normed_1 = normalize_data(data_1)
                 if T_MAX < np.array(data_1).shape[2]:
                     T_MAX = np.array(data_1).shape[2]
+                data.append(data_normed_1)
+                label.append(label_1)
             except Exception:
                 continue
 
-    data = zero_padding(data_normed_1, T_MAX)
+    data = zero_padding(data, T_MAX)
     data = np.swapaxes(np.swapaxes(data, 1, 3), 2, 3)
     data = np.expand_dims(data, axis=-1)
     label = np.array(label_1)
