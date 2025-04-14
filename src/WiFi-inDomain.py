@@ -61,7 +61,7 @@ def load_data(path_to_data, motion_sel, fraction_for_test):
     data = zero_padding(data, T_MAX)
     data = np.swapaxes(np.swapaxes(data, 1, 3), 2, 3)
     data = np.expand_dims(data, axis=-1)
-    label = np.array(label_1)
+    label = np.array(label)
 
     # 按比例划分训练集和测试集
     train_data, test_data, train_labels, test_labels = train_test_split(data, label, test_size=fraction_for_test,
